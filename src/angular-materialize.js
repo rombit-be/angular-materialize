@@ -355,6 +355,7 @@
                                     fixActive();
                                 });
                                 var onMouseDown = function (e) {
+				    $('input.select-dropdown').trigger('close');
                                     // preventing the default still allows the scroll, but blocks the blur.
                                     // We're inside the scrollbar if the clientX is >= the clientWidth.
                                     if (e.clientX >= e.target.clientWidth || e.clientY >= e.target.clientHeight) {
